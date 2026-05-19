@@ -1,0 +1,5 @@
+../Core/Src/servo.c:6:6:Servo_Init	1
+../Core/Src/servo.c:14:6:Servo_SetAngle	3
+../Core/Src/servo.c:26:6:Servo_SetPulse	3
+../Core/Src/servo.c:35:6:Servo_Center	1
+../Core/Src/servo.c:40:10:Servo_GetPulse	1
