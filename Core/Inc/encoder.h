@@ -12,6 +12,10 @@
 #define MOTOR_PWM_MAX  999
 #define MOTOR_PWM_MIN  0
 
+/* ── 사용자 입력 범위 ── */
+#define MOTOR_USER_MAX  100   // 사용자 입력 최대값
+#define MOTOR_PWM_MAX   999   // 실제 PWM 최대값 (내부용)
+
 /* ── 함수 선언 ── */
 void Encoder_Init(TIM_HandleTypeDef *htim_pwm);
 void Motor_SetSpeed(uint16_t pwm, uint8_t direction);

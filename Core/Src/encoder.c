@@ -12,11 +12,13 @@ void Encoder_Init(TIM_HandleTypeDef *htim_pwm)
 }
 
 /* 속도 + 방향 설정 */
-void Motor_SetSpeed(uint16_t pwm, uint8_t direction)
+void Motor_SetSpeed(uint16_t user_input, uint8_t direction)
 {
-    if (pwm > MOTOR_PWM_MAX) pwm = MOTOR_PWM_MAX;
+    // ✅ 0~100 → 0~999 변환
+    if (user_input > MOTOR_USER_MAX) user_input = MOTOR_USER_MAX;
+    uint16_t pwm = (uint16_t)(user_input * 999 / 100);
 
-    _current_pwm = pwm;
+    _current_pwm = user_input;
     _current_dir = direction;
 
     if (direction == MOTOR_FORWARD) {

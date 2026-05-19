@@ -14,6 +14,7 @@
 #include "encoder.h"
 #include "supersonic.h"
 #include "serial_communication.h"
+#include "test.h"
 /* USER CODE END Includes */
 
 TIM_HandleTypeDef htim2;
@@ -49,6 +50,22 @@ int main(void)
   Supersonic_Init(&htim4);
   Serial_Init(&huart2);
   HAL_Delay(500);
+  
+  /* ═══════════════════════════════════════════════════════
+     테스트 모드 선택 (test.h에서 설정)
+     아래 중 하나를 1로 변경하여 테스트 실행
+     ═══════════════════════════════════════════════════════ */
+  if (TEST_MODE_MOTOR) {
+      Test_Motor();
+  } else if (TEST_MODE_SERVO) {
+      Test_Servo();
+  } else if (TEST_MODE_ULTRASONIC) {
+      Test_Ultrasonic();
+  } else if (TEST_MODE_SERIAL) {
+      Test_Serial();
+  } else if (TEST_MODE_ALL) {
+      Test_All();
+  }
   /* USER CODE END 2 */
 
   while (1)
