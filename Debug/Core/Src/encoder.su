@@ -1,5 +1,5 @@
 ../Core/Src/encoder.c:7:6:Encoder_Init	16	static
-../Core/Src/encoder.c:15:6:Motor_SetSpeed	16	static
-../Core/Src/encoder.c:37:6:Motor_Stop	8	static
-../Core/Src/encoder.c:42:10:Motor_GetPWM	4	static
-../Core/Src/encoder.c:47:9:Motor_GetDirection	4	static
+../Core/Src/encoder.c:15:6:Motor_SetSpeed	24	static
+../Core/Src/encoder.c:39:6:Motor_Stop	8	static
+../Core/Src/encoder.c:44:10:Motor_GetPWM	4	static
+../Core/Src/encoder.c:49:9:Motor_GetDirection	4	static

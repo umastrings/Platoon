@@ -1,0 +1,5 @@
+../Core/Src/test.c:22:6:Test_Motor	80	static
+../Core/Src/test.c:64:6:Test_Servo	104	static
+../Core/Src/test.c:122:6:Test_Ultrasonic	104	static
+../Core/Src/test.c:169:6:Test_Serial	120	static
+../Core/Src/test.c:211:6:Test_All	144	static
